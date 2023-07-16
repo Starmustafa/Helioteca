@@ -1,4 +1,8 @@
 package com.helioteca.pages;
 
-public class TasksPage {
+public class TasksPage extends BasePage {
+
+
+
+
 }

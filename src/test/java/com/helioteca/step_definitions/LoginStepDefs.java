@@ -2,6 +2,7 @@ package com.helioteca.step_definitions;
 
 import com.helioteca.pages.LoginPage;
 import com.helioteca.utilities.ConfigurationReader;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 public class LoginStepDefs {
 
@@ -36,8 +37,6 @@ public class LoginStepDefs {
       LoginPage loginPage=new LoginPage();
       loginPage.login(username,password);
     }
-
-
 
 
 
