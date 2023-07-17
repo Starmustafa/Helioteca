@@ -38,5 +38,8 @@ public  BasePage(){ PageFactory.initElements((Driver.getDriver()), this);}
 
     }
 
+    @FindBy (xpath = "//div[@id=\"expand\"]")
+    public WebElement profile;
+
 
 }

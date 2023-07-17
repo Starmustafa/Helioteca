@@ -1,4 +1,3 @@
-@tasks
 Feature: Tasks Module functionality
 
   Background: User logins and lands on the home page
