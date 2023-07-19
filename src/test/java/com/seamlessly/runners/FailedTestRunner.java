@@ -1,4 +1,4 @@
-package com.helioteca.runners;
+package com.seamlessly.runners;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "@target/rerun.txt",
-        glue = "com/helioteca/step_definitions"
+        glue = "com/seamlessly/step_definitions"
 )
 public class FailedTestRunner {
 }

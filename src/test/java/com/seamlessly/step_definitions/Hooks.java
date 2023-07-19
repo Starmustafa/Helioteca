@@ -1,11 +1,11 @@
-package com.helioteca.step_definitions;
+package com.seamlessly.step_definitions;
 
 
 
 
-import com.helioteca.utilities.BrowserUtils;
-import com.helioteca.utilities.ConfigurationReader;
-import com.helioteca.utilities.Driver;
+import com.seamlessly.utilities.BrowserUtils;
+import com.seamlessly.utilities.ConfigurationReader;
+import com.seamlessly.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
