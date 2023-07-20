@@ -17,7 +17,7 @@ Feature: Tasks Module functionality
     And user clicks on "Groups" on the contact’s info page
     Then User can see all the available groups name through the group’s dropdown menu
 
-@task_3
+@task3
 Scenario: User can add a new property as “Anniversary” to the contact’s info page from the “Add new property” dropdown menu.
   Given user navigates to "contacts" module page
   And user clicks on Add new property

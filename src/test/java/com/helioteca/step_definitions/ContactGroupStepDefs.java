@@ -70,6 +70,7 @@ public class ContactGroupStepDefs {
     public void userShouldSeeOnContactSInfoPage(String newlyAddedPropertyName) {
         WebElement webElement = contactGroupPage.locateNewlyAddedPropertyByName(newlyAddedPropertyName);
     Assert.assertTrue(webElement.isDisplayed());
+
     }
 
 
