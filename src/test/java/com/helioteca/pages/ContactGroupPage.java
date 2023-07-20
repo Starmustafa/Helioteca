@@ -54,7 +54,7 @@ public class ContactGroupPage extends BasePage {
 
 
     /**
-     * this will help you create 3 groups with parameterization method.
+     * will help you create 3 groups with parameterization method
      * @param
      */
     public void createGroupMethod(String group1, String group2, String group3) {

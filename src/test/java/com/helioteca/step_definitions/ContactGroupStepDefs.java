@@ -39,7 +39,7 @@ public class ContactGroupStepDefs {
 
 
         List <String> expectedListName = contactGroupPage.getElementsTextByAttribute(contactGroupPage.groupNamesListedOnRight);
-         System.out.println(expectedListName.toString()+"expected");
+
 
         Assert.assertEquals(expectedListName,actualListName);
 
@@ -68,8 +68,6 @@ public class ContactGroupStepDefs {
     public void userShouldSeeOnContactSInfoPage(String newlyAddedPropertyName) {
         WebElement webElement = contactGroupPage.locateNewlyAddedPropertyByName(newlyAddedPropertyName);
     Assert.assertTrue(webElement.isDisplayed());
-
-
     }
 
 
