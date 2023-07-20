@@ -54,6 +54,8 @@ public class ContactGroupStepDefs {
     @And("user clicks on Add new property")
     public void userClicksOnAddNewProperty() {
         contactGroupPage.addNewProperty.click();
+
+
     }
 
     @And("choose {string}")
