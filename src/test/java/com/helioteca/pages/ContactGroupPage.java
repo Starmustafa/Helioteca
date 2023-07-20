@@ -1,5 +1,4 @@
 package com.helioteca.pages;
-
 import com.helioteca.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -19,7 +18,7 @@ public class ContactGroupPage extends BasePage {
     @FindBy(xpath = "//span[@title='+ New group']")
     public WebElement addNewGroupText;
 
-    @FindBy(xpath = "//button[@aria-label='Actions']")
+    @FindBy(xpath = "//button[@class=\"icon action-item__menutoggle icon-add\"]")
     public WebElement addNewGroupBox;
 
     @FindBy(xpath = "//input[@class='action-input__input focusable']")
@@ -50,15 +49,13 @@ public class ContactGroupPage extends BasePage {
 
 
 
-
-
-
     /**
      * will help you create 3 groups with parameterization method
      * @param
      */
     public void createGroupMethod(String group1, String group2, String group3) {
         ContactGroupPage contactGroupPage = new ContactGroupPage();
+
         contactGroupPage.addNewGroupBox.click();
 
 
@@ -66,10 +63,6 @@ public class ContactGroupPage extends BasePage {
         contactGroupPage.addGroupInputBox.sendKeys(group2 + Keys.ENTER);
         contactGroupPage.addGroupInputBox.sendKeys(group3 + Keys.ENTER);
     }
-
-
-
-
 
 
 
@@ -106,42 +99,11 @@ public class ContactGroupPage extends BasePage {
         return element;
     }
 
-    public void assertByValueOfDropDown(String text) {
-
-        String locator = "(//div[@title='" + text + "'])[1]";
-
-        WebElement element = Driver.getDriver().findElement(By.xpath(locator));
-
-        element.click();
-
-
-    }
-
-
-
-
-
-    public WebElement chooseWebElementByIndex(List<WebElement> elementsName, int numOfWebElements, int numOfIndex) {
-
-
-        List<WebElement> chosenWebElements = null;
-        if (elementsName.size() >= numOfWebElements && numOfIndex >= 0 && numOfIndex < numOfWebElements) {
-            // Choose the element at the specified index
-            chosenWebElements = (List<WebElement>) elementsName.get(numOfIndex);
-
-        } else {
-            System.out.println("The specified index is out of bounds or the number of elements is insufficient.");
-        }
-
-        return (WebElement) chosenWebElements;
-    }
-
-
 
 
     /**
      *
-     * @param listt
+     * @param
      * @return this will help you get List of WebElements and will return the List<String> base on the value of title
      */
     public List<String> getElementsTextByAttribute(List<WebElement> list) {
