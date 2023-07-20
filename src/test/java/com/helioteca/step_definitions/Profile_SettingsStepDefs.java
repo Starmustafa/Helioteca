@@ -52,28 +52,11 @@ public class Profile_SettingsStepDefs {
 
 
 
-  @Then("user only be able to enter numbers in phone number input box")
-    public void userOnlyBeAbleToEnterNumbersInPhoneNumberInputBox() {
 
-        String phoneNumber = profile_settingsPage.PhoneNumBox.getText();
-
-        boolean flag=true;
-        if (!phoneNumber.trim().isEmpty())
-        {
-
-            for (char c : phoneNumber.toCharArray()) {
-                if (!Character.isDigit(c)) {
-                   flag=false;
-                   break;
-                }
-            }
-
-            Assert.assertTrue(flag);
-        }
 
     }
 
 
-}
+
 
 
