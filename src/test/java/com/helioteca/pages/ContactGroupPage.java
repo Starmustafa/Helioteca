@@ -141,7 +141,7 @@ public class ContactGroupPage extends BasePage {
 
     /**
      *
-     * @param list
+     * @param listt
      * @return this will help you get List of WebElements and will return the List<String> base on the value of title
      */
     public List<String> getElementsTextByAttribute(List<WebElement> list) {
