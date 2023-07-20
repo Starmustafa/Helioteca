@@ -1,9 +1,9 @@
-package com.seamlessly.pages;
+package com.helioteca.pages;
 
 
 
 
-import com.seamlessly.utilities.Driver;
+import com.helioteca.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

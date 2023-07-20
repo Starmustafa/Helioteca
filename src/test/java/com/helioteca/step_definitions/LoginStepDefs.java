@@ -1,7 +1,7 @@
-package com.seamlessly.step_definitions;
+package com.helioteca.step_definitions;
 
-import com.seamlessly.pages.LoginPage;
-import com.seamlessly.utilities.ConfigurationReader;
+import com.helioteca.pages.LoginPage;
+import com.helioteca.utilities.ConfigurationReader;
 import io.cucumber.java.en.Given;
 public class LoginStepDefs {
 

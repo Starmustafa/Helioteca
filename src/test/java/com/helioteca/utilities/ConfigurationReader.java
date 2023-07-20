@@ -1,4 +1,4 @@
-package com.seamlessly.utilities;
+package com.helioteca.utilities;
 
 import java.io.FileInputStream;
 import java.io.IOException;

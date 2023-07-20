@@ -1,4 +1,4 @@
-package com.seamlessly.utilities;
+package com.helioteca.utilities;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
