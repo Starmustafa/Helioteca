@@ -1,9 +1,9 @@
-package com.seamlessly.step_definitions;
+package com.helioteca.step_definitions;
 
-import com.seamlessly.pages.TasksCurrent_Page;
-import com.seamlessly.pages.TasksPage;
-import com.seamlessly.pages.Tasks_New_Tasks_Page;
-import com.seamlessly.utilities.BrowserUtils;
+import com.helioteca.pages.TasksCurrent_Page;
+import com.helioteca.pages.TasksPage;
+import com.helioteca.pages.Tasks_New_Tasks_Page;
+import com.helioteca.utilities.BrowserUtils;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;

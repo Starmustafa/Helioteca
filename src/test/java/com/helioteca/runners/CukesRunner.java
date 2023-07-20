@@ -1,4 +1,4 @@
-package com.seamlessly.runners;
+package com.helioteca.runners;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -13,9 +13,9 @@ import org.junit.runner.RunWith;
                 "json:target/cucumber.json"
         },
         features = "src/test/resources/features",
-        glue = "com/seamlessly/step_definitions",
+        glue = "com/helioteca/step_definitions",
         dryRun = false,
-        tags = "",
+        tags = "@B29G41-244",
         publish = true //generating a report with public link
 )
 public class CukesRunner {}
