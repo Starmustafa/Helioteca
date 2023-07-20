@@ -46,6 +46,17 @@ public class ContactGroupPage extends BasePage {
 
     @FindBy (xpath = "//div[@class='property property--last property-anniversary' and (@prop-name=\"anniversary\")]")
     public WebElement anniversary;
+
+
+
+
+
+
+
+    /**
+     * this will help you create 3 groups with parameterization method yey
+     * @param
+     */
     public void createGroupMethod(String group1, String group2, String group3) {
         ContactGroupPage contactGroupPage = new ContactGroupPage();
         contactGroupPage.addNewGroupBox.click();
@@ -56,6 +67,16 @@ public class ContactGroupPage extends BasePage {
     }
 
 
+
+
+
+
+
+
+    /**
+     * this will help you locate elements and (click it) with the value of title of the webElement
+     * @param text
+     */
     public void chooseByText(String text) {
 
         String locator = "(//div[@title='" + text + "'])[1]";
@@ -67,6 +88,16 @@ public class ContactGroupPage extends BasePage {
 
     }
 
+
+
+
+
+
+    /**
+     *
+     * @param nameOfNewlyAddedProperty
+     * @return will return you a WebElement that matches the name of the property you newly added
+     */
     public WebElement locateNewlyAddedPropertyByName (String nameOfNewlyAddedProperty){
    String locator = "//div[@class='property__value property__title--right' and contains(text(),'" + nameOfNewlyAddedProperty + "')]";
 
@@ -105,6 +136,13 @@ public class ContactGroupPage extends BasePage {
     }
 
 
+
+
+    /**
+     *
+     * @param list
+     * @return this will help you get List of WebElements and will return the List<String> base on the value of title
+     */
     public List<String> getElementsTextByAttribute(List<WebElement> list) {
         List<String> elemTexts = new ArrayList<>();
         for (WebElement el : list) {
