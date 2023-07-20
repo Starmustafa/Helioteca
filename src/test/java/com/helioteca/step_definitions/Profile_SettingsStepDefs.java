@@ -46,10 +46,11 @@ public class Profile_SettingsStepDefs {
         String actualFullName= profile_settingsPage.FullNameBox.getAttribute("value");
 
 
-        //String expectedName = profile_settingsPage.ProfileName.getText().toString();
-
         Assert .assertEquals(UserName,actualFullName);
     }
+
+
+
 
   @Then("user only be able to enter numbers in phone number input box")
     public void userOnlyBeAbleToEnterNumbersInPhoneNumberInputBox() {
