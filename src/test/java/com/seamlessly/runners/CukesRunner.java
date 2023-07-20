@@ -1,4 +1,4 @@
-package com.helioteca.runners;
+package com.seamlessly.runners;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -9,10 +9,11 @@ import org.junit.runner.RunWith;
         plugin = {
                 "html:target/cucumber-reports.html",
                 "rerun:target/rerun.txt",
-                "me.jvt.cucumber.report.PrettyReports:target/cucumber"
+                "me.jvt.cucumber.report.PrettyReports:target/cucumber",
+                "json:target/cucumber.json"
         },
         features = "src/test/resources/features",
-        glue = "com/helioteca/step_definitions",
+        glue = "com/seamlessly/step_definitions",
         dryRun = false,
         tags = "",
         publish = true //generating a report with public link
