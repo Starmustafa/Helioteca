@@ -54,12 +54,13 @@ public class ContactGroupPage extends BasePage {
 
 
     /**
-     * this will help you create 3 groups with parameterization method yey
+     * this will help you create 3 groups with parameterization method.
      * @param
      */
     public void createGroupMethod(String group1, String group2, String group3) {
         ContactGroupPage contactGroupPage = new ContactGroupPage();
         contactGroupPage.addNewGroupBox.click();
+
 
         contactGroupPage.addGroupInputBox.sendKeys(group1 + Keys.ENTER);
         contactGroupPage.addGroupInputBox.sendKeys(group2 + Keys.ENTER);
