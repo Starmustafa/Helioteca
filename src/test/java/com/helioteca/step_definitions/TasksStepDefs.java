@@ -1,19 +1,18 @@
 package com.helioteca.step_definitions;
 
-import com.helioteca.pages.BasePage;
-import com.helioteca.pages.LoginPage;
+import com.helioteca.pages.TasksCurrent_Page;
 import com.helioteca.pages.TasksPage;
 import com.helioteca.pages.Tasks_New_Tasks_Page;
 import com.helioteca.utilities.BrowserUtils;
-import com.sun.source.tree.AssertTree;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 
-import javax.swing.text.Utilities;
+import java.util.List;
 
 public class TasksStepDefs {
        TasksPage tasksPage = new TasksPage();
@@ -98,5 +97,43 @@ public class TasksStepDefs {
        String completedTask= tasksNewTasksPage.addedTask.getText();
 
         Assert.assertTrue(completedTask.contains(expectedResult));
+    }
+
+    @Then("user clicks on the star icon next to the added task")
+    public void userClicksOnTheStarIconNextToTheAddedTask() {
+
+        tasksNewTasksPage.starIcon.click();
+    }
+
+    @Then("user heads to Important section")
+    public void userHeadsToImportantSection() {
+        tasksNewTasksPage.importantSection.click();
+    }
+
+    @And("user verifies {string} is added to important tasks")
+    public void userVerifiesIsAddedToImportantTasks(String expectedResult) {
+
+        String actualResult= tasksNewTasksPage.addedTask.getText();
+        Assert.assertTrue(expectedResult.equals(actualResult));
+
+    }
+
+    TasksCurrent_Page tasksCurrent_page= new TasksCurrent_Page();
+    @Given("is on Current page")
+    public void isOnCurrentPage() {
+        tasksCurrent_page.currentSection.click();
+    }
+
+    @Then("user verifies the number of uncompleted tasks next to the Current tab")
+    public void userVerifiesTheNumberOfUncompletedTasksNextToTheCurrentTab() {
+
+        List<WebElement> uncompletedTasks = tasksCurrent_page.uncompletedTasks;
+
+        String uncompletedTasksNumber = tasksCurrent_page.numberOfTasks.getText();
+
+        int intValue = Integer.parseInt(uncompletedTasksNumber);
+
+        Assert.assertTrue(uncompletedTasks.size() == intValue);
+
     }
 }
