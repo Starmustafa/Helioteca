@@ -16,7 +16,7 @@ Feature: Edit/Enter Profile Settings Functionality
 
 
 @Nadi
-  Scenario:Scenario:verify user name and full name
+  Scenario:verify user name and full name
     Given user navigates to profile
     And user navigates to "settings" module page
     When user click personal info button

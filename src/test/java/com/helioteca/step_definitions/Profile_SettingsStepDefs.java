@@ -16,8 +16,16 @@ public class Profile_SettingsStepDefs {
 
     @Given("user navigates to profile")
     public void userNavigatesToProfile() {
-        profile_settingsPage.profile.click();
+          tasksPage.profile.click();
     }
+
+
+    @Given("user navigates setting")
+    public void userNavigatesSetting() {
+        profile_settingsPage.profile.click();
+
+    }
+
     @Then("user click personal info button")
     public void user_click_personal_info_button() {
     profile_settingsPage.personalInfo.click();
@@ -34,10 +42,8 @@ public class Profile_SettingsStepDefs {
 
     }
 
-    @Given("user is on personal info page")
-    public void userIsOnPersonalInfoPage() {
 
-    }
+
 
     @Then("user can see user name and full name is same {string}")
     public void userCanSeeUserNameAndFullNameIsSame(String UserName) {
@@ -51,10 +57,7 @@ public class Profile_SettingsStepDefs {
 
 
 
-
-
-
-    }
+}
 
 
 
