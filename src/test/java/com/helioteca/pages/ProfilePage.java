@@ -1,15 +1,13 @@
 package com.helioteca.pages;
 
-import com.helioteca.utilities.Driver;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+
 
 public class ProfilePage extends BasePage{
 
-    public ProfilePage(){
-        PageFactory.initElements(Driver.getDriver(),this);
-    }
+
 @FindBy(xpath = "//li[@data-id='settings']")
 public WebElement settingButton;
 
