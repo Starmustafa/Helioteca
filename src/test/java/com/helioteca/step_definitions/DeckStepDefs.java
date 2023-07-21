@@ -6,31 +6,28 @@ import com.helioteca.utilities.BrowserUtils;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 
 public class DeckStepDefs {
 
     DeckPage deckPage = new DeckPage();
 
-    @Given("the user navigates to {string} module page")
-    public void the_user_navigates_to_module_page(String modulePage) {
-        deckPage.clickMenuByText("deck");
-    }
 
     @When("the user clicks on Open navigation button")
     public void the_user_clicks_on_open_navigation_button() {
       deckPage.openNavigationButton.click();
-        BrowserUtils.sleep(5);
+      BrowserUtils.sleep(2);
     }
     @When("the user clicks on Add board button")
     public void the_user_clicks_on_add_board_button() {
         deckPage.addBoardButton.click();
-        BrowserUtils.sleep(5);
+        BrowserUtils.sleep(1);
 
     }
     @When("the user types in {string} in the Board name text field")
     public void the_user_types_in_in_the_board_name_text_field(String boardName) {
-        deckPage.boardNameField.sendKeys("School");
-        BrowserUtils.sleep(5);
+        deckPage.boardNameField.sendKeys(boardName);
+        BrowserUtils.sleep(1);
 
     }
     @When("the user clicks on Submit Arrow Button in Board Menu")
@@ -38,9 +35,10 @@ public class DeckStepDefs {
         deckPage.submitArrow.click();
     }
     @Then("newly created board {string} should be displayed under All boards")
-    public void newly_created_board_should_be_displayed_under_all_boards(String string) {
-        System.out.println("deckPage.schoolBoard.isDisplayed() = " + deckPage.schoolBoard.isDisplayed());
-        BrowserUtils.sleep(5);
+    public void newly_created_board_should_be_displayed_under_all_boards(String expectedName) {
+       String actualName=  deckPage.schoolBoard.getText();
+        Assert.assertEquals(expectedName,actualName);
+        BrowserUtils.sleep(1);
     }
 
 
@@ -68,5 +66,15 @@ public class DeckStepDefs {
     }
 
 
+    @When("the user clicks on Add board button.")
+    public void theUserClicksOnAddBoardButton() {
+        deckPage.addBoardButton.click();
+        BrowserUtils.sleep(1);
+    }
 
+    @When("the user clicks on Open navigation button.")
+    public void theUserClicksOnOpenNavigationButton() {
+        deckPage.openNavigationButton.click();
+        BrowserUtils.sleep(2);
+    }
 }

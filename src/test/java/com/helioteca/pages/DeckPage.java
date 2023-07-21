@@ -4,15 +4,13 @@ import com.helioteca.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import com.helioteca.pages.BasePage;
+import org.openqa.selenium.WebElement;
 
-public class DeckPage extends BasePage {
-
-    public DeckPage() {
-        PageFactory.initElements(Driver.getDriver(), this);
-    }
+public class DeckPage extends BasePage{
 
 
-    @FindBy(xpath = "//button[@class='action-item action-item--single app-navigation-toggle undefined undefined has-tooltip']")
+    @FindBy(xpath = "(//span[@class='material-design-icon menu-icon'])[1]")
     public WebElement openNavigationButton;
 
     @FindBy(xpath = "//span[@title='Add board']/..")
@@ -36,4 +34,7 @@ public class DeckPage extends BasePage {
 
     @FindBy(className = "stack__title has-tooltip")
     public WebElement highSchoolList;
+
+    @FindBy(xpath = "(//li[@data-id='deck'])[1]")
+    public WebElement deckModule;
 }
