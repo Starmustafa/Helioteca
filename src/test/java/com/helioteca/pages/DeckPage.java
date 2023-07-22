@@ -20,19 +20,17 @@ public class DeckPage extends BasePage{
     @FindBy(xpath = "//input[@placeholder='Board name']")
     public WebElement boardNameField;
 
-    @FindBy(xpath = "//input[@class='icon-confirm']")
+    @FindBy(className = "icon-confirm.has-tooltip")
     public WebElement submitArrow;
 
-    @FindBy(xpath = "(//div[@class='app-navigation-entry-icon'])[2]")
+    @FindBy(xpath = "//span[@title='School']")
     public WebElement schoolBoard;
 
     @FindBy(xpath = "//input[@id='new-stack-input-main']")
     public WebElement listNameField;
 
-    @FindBy(xpath = "//input[@id='new-stack-input-main']")
-    public WebElement getListNameField;
 
-    @FindBy(className = "stack__title has-tooltip")
+    @FindBy(xpath = "//div[@class='stack__header']")
     public WebElement highSchoolList;
 
     @FindBy(xpath = "(//li[@data-id='deck'])[1]")

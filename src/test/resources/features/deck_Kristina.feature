@@ -9,9 +9,7 @@ Feature: Deck Module functionality
 @task111
   Scenario: Verify user can create a new board
     When the user clicks on Open navigation button.
-
-     #the user clicks on Add board button
-   When the user clicks on Add board button.
+    When the user clicks on Add board button.
     And the user types in "School" in the Board name text field
     And the user clicks on Submit Arrow Button in Board Menu
     Then newly created board "School" should be displayed under All boards
