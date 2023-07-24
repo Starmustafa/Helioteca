@@ -21,4 +21,20 @@ Feature: Deck Module functionality
     And user types "high school" in text field
     And user clicks on addListButtonArrow
     Then user can see newly created list "high school"
+@task333
+  Scenario: User can add a new card/task on any list on the current board
+    When the user clicks on Open navigation button.
+    When user clicks on board with a name "School"
+    And user clicks on Add card button
+    And user types "New Card" in Card Name text field
+    And user clicks submit arrow button on Card Menu
+    Then user can see newly created "New Card" card
+@task444
+  Scenario: User can assign any card/task to himself/herself by using the three dots on the related card
+    When the user clicks on Open navigation button.
+    When user clicks on board with a name "School"
+    Then clicks on "Assign to me" from three dot button on the card
+    Then user clicks on Assign to me
+    And user can see that related card has been assigned to him or her
+
 
