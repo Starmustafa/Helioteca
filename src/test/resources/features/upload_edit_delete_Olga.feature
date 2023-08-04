@@ -24,12 +24,11 @@ Feature: Upload Edit Delete Module functionality
   Scenario: Verify user can delete from three dots menu
     Given  user navigates to "Files" module page
     Then user clicks on three dots of selected item
-
     And  clicks on delete folder or file
     Then file should no longer be part of displayed list
 
 @Olga4
   Scenario:
-    Given user navigates on "Files" module page
-    Then user verify number of items match displayed number of folders and files
+    Given user navigates on Files module page
+    Then verifies the total number of files and folders under the files list table
 
